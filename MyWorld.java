@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -128,7 +128,7 @@ public class MyWorld extends World
         {
             if( messageShown == false )
             {
-                JOptionPane.showMessageDialog( null, playerOneName + "Player One, it is your turn.", "for playerOne", JOptionPane.PLAIN_MESSAGE );
+                JOptionPane.showMessageDialog( null, playerOneName + "it is your turn.", "for playerOne", JOptionPane.PLAIN_MESSAGE );
                
             }
         }
@@ -136,7 +136,7 @@ public class MyWorld extends World
         {
             if( messageShown == false )
             {
-                JOptionPane.showMessageDialog( null, playerTwoName + "Player Two, it is your turn.", "for playerTwo", JOptionPane.PLAIN_MESSAGE );
+                JOptionPane.showMessageDialog( null, playerTwoName + "it is your turn.", "for playerTwo", JOptionPane.PLAIN_MESSAGE );
                 
             }
         }
@@ -200,7 +200,7 @@ public class MyWorld extends World
         {
             for( int c = 0; c < board[r].length; c ++ )
             {
-                toDisplay = new GreenfootImage( board[r][c], 100, Color.WHITE, new Color(0,0,0,0) );  
+                toDisplay = new GreenfootImage( board[r][c], 100, Color.BLACK, new Color(0,0,0,0) );  
                 getBackground().drawImage( toDisplay, c * getWidth()/3 + (getWidth()/3 - toDisplay.getWidth() )/2 , r * getHeight()/3 + (getHeight()/3 - toDisplay.getHeight() )/2 );
             }
         }
